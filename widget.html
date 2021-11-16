@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pago a Capital | Grupo Concordia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" type = "text/css" href="./css/load.css">
+</head>
+<body>
+    <!-- <div class="container">  -->
+        <!-- <div class="form-pago"> -->
+            <form action="/server/pagos_capital/realizarPago" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="pago"><b>Recalcular Tabla</b></label>
+                    <input class="form-input" type="number" name="pago" id="pago">
+                    <input id="submit-pago" type="submit" class="btn" value="Realizar Pago">
+                    
+                </div>
+            </form>
+            <!-- <button class="boton" type="submit" value="Alertas">Alertas</button> -->
+            <div id="facturas-container" class="facturas">
+            <!-- Aqui va a ir el loader tabla -->
+                <table class="detalle-facturas">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>DESCRIPCION</th>
+                            <th>CANTIDAD</th>
+                            <th>INTERES</th>
+                            <th>CAPITAL</th>
+                            <th>ESTADO</th>
+                        </tr>   
+                    </thead>
+                    <tbody id="body-facturas">
+
+                    </tbody>
+                </table>
+            </div>
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- Load -->
+    <!-- <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- <script src="./js/loader.js"></script> -->
+    <script src="https://live.zwidgets.com/js-sdk/1.1/ZohoEmbededAppSDK.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
